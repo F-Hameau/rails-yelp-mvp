@@ -1,0 +1,19 @@
+<h1>Add a restaurant</h1>
+
+<% if @restaurant.errors.any? %>
+  <div class="errors-container">
+    <ul>
+      <% @restaurant.errors.full_messages.each do |message| %>
+        <li> <i class="fas fa-exclamation-circle"></i> <%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :category %>
+  <%= f.input :phone_number %>
+  <%= f.submit "Add", class: "btn btn-primary" %>
+<% end %>

@@ -5,11 +5,22 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="my-container">
+      <div class="my-navbar">
+        <a href="http://localhost:3000/restaurants" class="my-navbar-item my-navbar-link">Yelp</a>
+        <a href="http://localhost:3000/restaurants/new" class="my-navbar-item my-navbar-link">Add a restaurant</a>
+      </div>
+    </div>
+    <br><br><br>
+    <div class="yield">
+     <%= yield %>
+    </div>
   </body>
 </html>

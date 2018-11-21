@@ -1,0 +1,12 @@
+<h1>Restaurants</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= restaurant.name %>
+      <%= link_to restaurant_path(restaurant.id) do %>
+        <i class="fas fa-search small"></i>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
